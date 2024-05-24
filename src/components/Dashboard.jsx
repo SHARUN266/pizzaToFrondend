@@ -101,7 +101,7 @@ export function Dashboard() {
         bg={"white"}
       />
        </Box>
-      {getAllPizzaEntry?.length == 0 ? (
+      {getAllPizzaEntry?.length === 0 ? (
         <>
           <Image p="3rem" src={Chef} />
         </>
@@ -203,7 +203,7 @@ export function Dashboard() {
                       {" "}
                       <Button
                         size={["xs", "sm", "lg"]}
-                        isDisabled={pizza.quantity == 1 ? true : false}
+                        isDisabled={pizza.quantity === 1 ? true : false}
                         onClick={() => {
                           setFlag(!flag);
                           patchDataToServer({
